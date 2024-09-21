@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--
+      Quelle für Wort 3 in männlicher Form:
+      https://github.com/NikolaiRadke/Schimpfolino/blob/8c29e7297b03ad0f51f86d218a153ba7bfcc3615/src/eeprom/files/eeprom4.txt#L1
+    -->
     <string-array name="array_wort3maennlich">
         <item>busch</item>
         <item>fink</item>

@@ -4,7 +4,6 @@
     <!--
       Quelle erster Teil Substantiv:
       https://github.com/NikolaiRadke/Schimpfolino/blob/8c29e7297b03ad0f51f86d218a153ba7bfcc3615/src/eeprom/files/eeprom2.txt#L1
-
     -->
     <string-array name="array_wort2">
         <item>Stampf</item>

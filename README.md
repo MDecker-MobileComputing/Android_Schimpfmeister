@@ -2,11 +2,16 @@
 
 <br>
 
+Das Repo enhält ein Projekt für *Android Studio* für eine native Android-App (Java).
+Die App erzeugt zufällige Schimpfwörter unter Verwendung der Wortlisten und des Algorithmus von
+[Schimpfolino](https://github.com/NikolaiRadke/Schimpfolino/)
+
+<br>
 
 Demonstrierte Konstrukte:
 
 * [ActionBar](https://developer.android.com/develop/ui/views/components/appbar?hl=de)
-* Arrays als Ressourcen
+* String-Arrays als Ressourcen
 
 <br>
 

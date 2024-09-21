@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--
+      Quelle für weibliche Substantive:
+      https://github.com/NikolaiRadke/Schimpfolino/blob/8c29e7297b03ad0f51f86d218a153ba7bfcc3615/src/eeprom/files/eeprom3.txt#L1
+    -->
     <string-array name="array_wort3weiblich">
         <item>suppe</item>
         <item>socke</item>
