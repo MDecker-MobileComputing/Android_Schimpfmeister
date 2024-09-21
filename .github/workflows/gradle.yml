@@ -1,0 +1,30 @@
+name: APK-Datei bauen
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  job-apk-bauen:
+    name: Debug-APK bauen
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup JDK
+        uses: actions/setup-java@v4
+        with:
+          java-version: '19'
+          distribution: 'temurin'
+      - name: Gradle aufrufen
+        run: bash ./gradlew clean assembleDebug --stacktrace
+      - name: Aktuellen Zeitstempel in Umgebungsvariable kopieren
+        run: echo "zeitstempel=$(date +'%Y-%m-%d_%H-%M')" >> $GITHUB_ENV
+      - name: APK-Datei hochladen
+        uses: actions/upload-artifact@v4
+        with:
+          name: Schimpfmeister_AndroidInstallFile-${{ env.zeitstempel }}
+          path: app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
+          retention-days: 2
