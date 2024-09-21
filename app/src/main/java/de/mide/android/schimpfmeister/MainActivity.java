@@ -34,10 +34,13 @@ public class MainActivity extends AppCompatActivity {
     /** Objekt für zufällige Erzeugung von Schimpfwörtern. */
     private SchimpfwortGenerator _schimpfwortGenerator = new SchimpfwortGenerator(this);
 
+    /** UI-Elemente zur Anzeige des Schimpfworts. */
     private TextView _textView = null;
+    
     
     /**
      * Lifecycle-Methode: Layout-Datei für Activity setzen und ActionBar konfigurieren.
+     * Es wird auch gleich ein Schimpfwort erzeugt und angezeigt.
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -162,7 +165,7 @@ public class MainActivity extends AppCompatActivity {
      */
     private void hilfeAnzeigen() {
 
-        Uri httpUri = Uri.parse("https://github.com/MDecker-MobileComputing/Android_Schimpfmeister");
+        Uri httpUri = Uri.parse("https://bit.ly/schimpfmeister"); // Kurz-URL für GitHub-Seite
         Intent intent = new Intent(ACTION_VIEW);
         intent.setData(httpUri);
 
