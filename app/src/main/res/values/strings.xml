@@ -1,0 +1,10 @@
+<resources>
+
+    <string name="app_name">Schimpfmeister</string>
+
+    <string name="app_untertitel">Schimpfwortgenerator</string>
+
+    <string name="ueber_titel">Über Schimpfmeister</string>
+    <string name="ueber_satz">Diese App verwendet für die Erzeugung der Beschimpfungen den Algorithmus und die Wortlisten von Schimpfolino.</string>
+
+</resources>

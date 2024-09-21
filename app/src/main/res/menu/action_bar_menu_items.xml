@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Wegen showAsAction="always" werden für die folgenden Menü-Einträge
+         die Icons in der ActionBar angezeigt. -->
+    <item
+        android:id="@+id/action_neuerspruch"
+        android:icon="@drawable/baseline_refresh_24"
+        android:title="Neuer Spruch"
+        app:showAsAction="always" />
+
+
+
+    <!-- Wegen showAsAction="never" werden für die folgenden Menü-Einträge
+         als Einträge im Overflow-Menü angezeigt. -->
+    <item
+        android:id="@+id/action_ueber"
+        android:title="Über diese App"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_hilfe"
+        android:title="Hilfe"
+        app:showAsAction="never" />
+
+</menu>
