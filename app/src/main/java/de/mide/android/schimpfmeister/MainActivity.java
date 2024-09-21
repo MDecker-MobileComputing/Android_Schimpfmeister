@@ -48,6 +48,8 @@ public class MainActivity extends AppCompatActivity {
         _textView = findViewById(R.id.schimpfwort_anzeige);
 
         actionBarKonfigurieren();
+
+        neuesSchimpfwort();
     }
 
 
@@ -108,9 +110,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (selectedMenuId == R.id.action_neuerspruch) {
 
-            String schimpfwort = _schimpfwortGenerator.getSchimpfwort();
-            _textView.setText(schimpfwort);
-
+            neuesSchimpfwort();
             return true;
 
         } else if (selectedMenuId == R.id.action_ueber) {
@@ -127,6 +127,16 @@ public class MainActivity extends AppCompatActivity {
 
             return super.onOptionsItemSelected(item);
         }
+    }
+
+
+    /**
+     * Erzeugt ein neues Schimpfwort und stellt es dar.
+     */
+    private void neuesSchimpfwort() {
+
+        String schimpfwort = _schimpfwortGenerator.getSchimpfwort();
+        _textView.setText(schimpfwort);
     }
 
 
