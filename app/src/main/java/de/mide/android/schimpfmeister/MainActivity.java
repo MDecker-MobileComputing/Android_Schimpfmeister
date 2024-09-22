@@ -17,6 +17,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.ActionBar;
 
 import de.mide.android.schimpfmeister.engine.SchimpfwortGenerator;
+import de.mide.android.schimpfmeister.engine.SchimpfwortRecord;
 
 
 /**
@@ -142,8 +143,10 @@ public class MainActivity extends AppCompatActivity {
      */
     private void neuesSchimpfwort() {
 
-        String schimpfwort = _schimpfwortGenerator.getSchimpfwort();
-        _adjektivTextview.setText(schimpfwort);
+        SchimpfwortRecord schimpfwort = _schimpfwortGenerator.getSchimpfwort();
+
+        _adjektivTextview.setText(   schimpfwort.adjektiv()   );
+        _substantivTextview.setText( schimpfwort.substantiv() );
     }
 
 

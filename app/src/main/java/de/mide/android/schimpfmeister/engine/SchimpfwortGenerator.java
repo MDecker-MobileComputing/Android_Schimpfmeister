@@ -52,7 +52,7 @@ public class SchimpfwortGenerator {
      *
      * @return Zufällig erzeugtes Schimpfwort.
      */
-    public String getSchimpfwort() {
+    public SchimpfwortRecord getSchimpfwort() {
 
         GenusEnum genus = getGenus();
 
@@ -60,8 +60,7 @@ public class SchimpfwortGenerator {
         String wort2 = getWort2();
         String wort3 = getWort3(genus);
 
-
-        return wort1 + " " + wort2 + wort3;
+        return new SchimpfwortRecord(wort1, wort2 + wort3);
     }
 
 
