@@ -34,8 +34,11 @@ public class MainActivity extends AppCompatActivity {
     /** Objekt für zufällige Erzeugung von Schimpfwörtern. */
     private SchimpfwortGenerator _schimpfwortGenerator = new SchimpfwortGenerator(this);
 
-    /** UI-Elemente zur Anzeige des Schimpfworts. */
-    private TextView _textView = null;
+    /** UI-Element zur Anzeige des Adjektivs am Anfang des Schimpfworts. */
+    private TextView _adjektivTextview = null;
+
+    /** UI-Element zur Anzeige des Substantivs am Ende des Schimpfworts. */
+    private TextView _substantivTextview = null;
     
     
     /**
@@ -48,7 +51,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        _textView = findViewById(R.id.schimpfwort_anzeige);
+        _adjektivTextview = findViewById(R.id.adjektiv_textview);
+        _substantivTextview = findViewById(R.id.subjektiv_textview);
 
         actionBarKonfigurieren();
 
@@ -139,7 +143,7 @@ public class MainActivity extends AppCompatActivity {
     private void neuesSchimpfwort() {
 
         String schimpfwort = _schimpfwortGenerator.getSchimpfwort();
-        _textView.setText(schimpfwort);
+        _adjektivTextview.setText(schimpfwort);
     }
 
 

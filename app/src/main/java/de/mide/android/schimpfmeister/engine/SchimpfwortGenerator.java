@@ -61,7 +61,7 @@ public class SchimpfwortGenerator {
         String wort3 = getWort3(genus);
 
 
-        return wort1 + "\n" + wort2 + wort3;
+        return wort1 + " " + wort2 + wort3;
     }
 
 
