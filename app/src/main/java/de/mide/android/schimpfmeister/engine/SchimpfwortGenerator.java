@@ -20,9 +20,23 @@ import de.mide.android.schimpfmeister.R;
  * anhand der Wortlisten und dem Algorithmus von "Schimpfolino" (Nikolai Radke).
  * <br><br>
  *
- * Ein Schimpfwort besteht aus zwei Wörtern: das erste Wort ist ein adjektiv, das zweite
+ * Ein Schimpfwort besteht aus zwei Wörtern: das erste Wort ist ein Adjektiv, das zweite
  * Wort ein Substantiv, welches aus zwei Wörtern zusammengesetzt ist (Wortkomposition);
  * es müssen insgesamt also drei zufällige Wörter ausgewählt werden.
+ * <br><br>
+ *
+ * Schritte zur Erzeugung eines Schimpfworts:
+ * <ul>
+ *     <li>Es wird zunächst ein zufälliger Genus ausgewählt.</li>
+ *     <li>Danach wird ein zufälliges Adjektiv ausgewählt, welches durch
+ *         Anhängen von "r" oder "s" (für Maskulinum und Neutrum) an den
+ *         Genus angepasst werden kann (für Femininum ist keine Anpassung
+ *         erforderlich).</li>
+ *      <li>Es wird dann ein Substantiv ausgewählt, welches der Anfang
+ *          des zweiten Worts ist.</li>
+ *      <li>In Abhängigkeit des Genus wird dann das zweite Substantiv ausgewählt,
+ *          welche das Ende des zweiten Worts ist.</li>
+ * </ul>
  */
 public class SchimpfwortGenerator {
 
@@ -32,7 +46,7 @@ public class SchimpfwortGenerator {
      */
     private Context _context = null;
 
-    /** Generator für Zufallszahlen */
+    /** Generator für Zufallszahlen. */
     private Random _random = new Random();
 
 
@@ -53,6 +67,10 @@ public class SchimpfwortGenerator {
      * @return Zufällig erzeugtes Schimpfwort.
      */
     public SchimpfwortRecord getSchimpfwort() {
+
+        Log.i(TAG4LOGGING,
+                "Anzahl der möglichen Schimpfwortkombinationen:" + getAnzahlKombinationen());
+
 
         GenusEnum genus = getGenus();
 
@@ -85,12 +103,12 @@ public class SchimpfwortGenerator {
 
 
     /**
-     * Methode gibt zufällig ausgewähltes Adjektiv zurück; dieses Adjektiv soll
-     * als erstes Wort verwendet werden.
+     * Methode gibt zufällig ausgewähltes Adjektiv zurück, welches in Abhängigkeit
+     * von {@code genus} dekliniert wird.
      *
      * @param genus Geschlecht des Adjektiv
      *
-     * @return Adjektiv in weiblicher Form, z.B. "Miefende".
+     * @return dekliniertes Adjektiv
      */
     private String getWort1(GenusEnum genus) {
 
@@ -153,6 +171,43 @@ public class SchimpfwortGenerator {
         int zufallsIndex     = _random.nextInt(stringArray.length);
 
         return stringArray[ zufallsIndex ];
+    }
+
+
+    /**
+     * Berechnung der möglichen Anzahl der Schimpfwortkombinationen.
+     *
+     * @return Anzahl der möglichen Schimpfwortkombinationen
+     */
+    public int getAnzahlKombinationen() {
+
+        int anzahlAjektive = getAnzahlElementeArray(R.array.array_adjektive);
+
+        int anzahlWort2 = getAnzahlElementeArray(R.array.array_wort2);
+
+        int anzahlWort3maennlich = getAnzahlElementeArray(R.array.array_wort3maennlich);
+        int anzahlWort3weiblich  = getAnzahlElementeArray(R.array.array_wort3weiblich);
+        int anzahlWort3neutral   = getAnzahlElementeArray(R.array.array_wort3neutral);
+
+        int summeWort3 = anzahlWort3maennlich + anzahlWort3weiblich + anzahlWort3neutral;
+
+        return anzahlAjektive * anzahlWort2 * summeWort3;
+    }
+
+
+    /**
+     * Methode zum Zählen der Elemente in einer String-Array-Ressource
+     *
+     * @param stringArrayResId ID der String-Array-Ressource
+     *
+     * @return Anzahl der Elemente im Array
+     */
+    public int getAnzahlElementeArray(int stringArrayResId) {
+
+        Resources resources  =  _context.getResources();
+        String[] stringArray = resources.getStringArray(stringArrayResId);
+
+        return stringArray.length;
     }
 
 }

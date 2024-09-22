@@ -155,10 +155,13 @@ public class MainActivity extends AppCompatActivity {
      */
     private void aboutDialogAnzeigen() {
 
+        int anzahlKombinationen = _schimpfwortGenerator.getAnzahlKombinationen();
+        String ueberText = getString(R.string.ueber_text, anzahlKombinationen);
+
         AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(this);
 
         dialogBuilder.setTitle(R.string.ueber_titel);
-        dialogBuilder.setMessage(R.string.ueber_satz);
+        dialogBuilder.setMessage(ueberText);
         dialogBuilder.setPositiveButton("Ok", null);
 
         AlertDialog dialog = dialogBuilder.create();

@@ -11,7 +11,7 @@ Die App erzeugt zufällige Schimpfwörter unter Verwendung der Wortlisten und de
 KI-Support:
 * Erfindung App-Name "Schimpfmeister" (ChatGPT 3.5)
 * Umwandlung Wortlisten von [Schimpfolino](https://github.com/NikolaiRadke/Schimpfolino/) in String-Array-Ressourcen 
-  für Android  (*GitHub Copilot* und *Gemini*)
+  für Android  (*GitHub Copilot* und *Google Gemini*)
 * Erzeugung App-Icon (Bing Image Generator)  
 
 <br>
