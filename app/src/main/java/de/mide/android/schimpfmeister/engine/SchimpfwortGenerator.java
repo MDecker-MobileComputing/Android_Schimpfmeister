@@ -68,10 +68,6 @@ public class SchimpfwortGenerator {
      */
     public SchimpfwortRecord getSchimpfwort() {
 
-        Log.i(TAG4LOGGING,
-                "Anzahl der möglichen Schimpfwortkombinationen:" + getAnzahlKombinationen());
-
-
         GenusEnum genus = getGenus();
 
         String wort1 = getWort1(genus);

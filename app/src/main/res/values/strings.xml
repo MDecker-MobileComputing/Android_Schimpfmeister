@@ -6,7 +6,7 @@
 
     <string name="ueber_titel">Über Schimpfmeister</string>
     <string name="ueber_text">Diese App verwendet für die Erzeugung der Beschimpfungen den
-        Algorithmus und die Wortlisten von Schimpfolino.\n\nDie App kann %d verschiedene
+        Algorithmus und die Wortlisten von Schimpfolino.\n\nDie App kann %,d verschiedene
         Schimpfwörter erzeugen.
     </string>
 
