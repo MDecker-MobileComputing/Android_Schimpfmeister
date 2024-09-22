@@ -4,15 +4,27 @@
 
 Das Repo enhält ein Projekt für *Android Studio* für eine native Android-App (Java).
 Die App erzeugt zufällige Schimpfwörter unter Verwendung der Wortlisten und des Algorithmus von
-[Schimpfolino](https://github.com/NikolaiRadke/Schimpfolino/)
+[Schimpfolino](https://github.com/NikolaiRadke/Schimpfolino/).
 
 <br>
 
-KI-Support:
+**Unterstützung durch KI:**
 * Erfindung App-Name "Schimpfmeister" (ChatGPT 3.5)
 * Umwandlung Wortlisten von [Schimpfolino](https://github.com/NikolaiRadke/Schimpfolino/) in String-Array-Ressourcen 
   für Android  (*GitHub Copilot* und *Google Gemini*)
 * Erzeugung App-Icon (Bing Image Generator)  
+
+<br>
+
+----
+
+## Screenshots ##
+
+<br>
+
+![Screenshot 1](screenshot_1.png) &nbsp; ![Screenshot 2](screenshot_2.png)
+
+![Screenshot 3](screenshot_3.png)
 
 <br>
 
