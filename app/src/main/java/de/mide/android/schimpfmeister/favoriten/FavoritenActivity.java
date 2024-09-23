@@ -5,6 +5,8 @@ import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import de.mide.android.schimpfmeister.FavoritenSingleton;
 import de.mide.android.schimpfmeister.R;
@@ -15,10 +17,12 @@ import de.mide.android.schimpfmeister.R;
  */
 public class FavoritenActivity extends AppCompatActivity implements View.OnClickListener {
 
+    /** Singleton-Objekt für Zugriff auf Favoriten-Liste. */
     private FavoritenSingleton _favoritenSingleton = FavoritenSingleton.getInstance();
 
+
     /**
-     * Lifecycle-Methode: Layout-Datei für Activity laden, RecyclerView initialisieren
+     * Lifecycle-Methode: Layout-Datei für Activity laden, {@code }RecyclerView} initialisieren
      * und Event-Handler für "Zurück"-Button setzen.
      */
     @Override
@@ -33,6 +37,14 @@ public class FavoritenActivity extends AppCompatActivity implements View.OnClick
 
         Button button = findViewById(R.id.zurueckButton);
         button.setOnClickListener(this);
+
+        // RecyclerView initialisieren
+        RecyclerView recyclerView = findViewById(R.id.favoritenRecyclerView);
+
+        recyclerView.setLayoutManager( new LinearLayoutManager(this) );
+
+        FavoritenAdapter adapter = new FavoritenAdapter( _favoritenSingleton );
+        recyclerView.setAdapter(adapter);
     }
 
 
