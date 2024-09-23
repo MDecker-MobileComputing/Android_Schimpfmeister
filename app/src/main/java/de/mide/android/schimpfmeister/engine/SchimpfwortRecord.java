@@ -14,4 +14,15 @@ package de.mide.android.schimpfmeister.engine;
  */
 public record SchimpfwortRecord( String adjektiv,
                                  String substantiv ) {
+
+    @Override
+    /**
+     * Methode gibt String mit ganzem Schipfwort (beide Wörter) zurück.
+     *
+     * @return Ganzes Schimpfwort als String, z.B. "Faselnder Röchelschluck"
+     */
+    public String toString() {
+
+        return adjektiv + " " + substantiv;
+    }
 }
