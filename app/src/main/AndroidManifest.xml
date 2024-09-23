@@ -27,7 +27,7 @@
         </activity>
 
         <activity
-            android:name=".favoriten.FavoritenActivity"
+            android:name=".favoritenActivity.FavoritenActivity"
             android:exported="false" />
 
     </application>

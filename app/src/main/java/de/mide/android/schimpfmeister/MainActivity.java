@@ -18,7 +18,7 @@ import androidx.appcompat.app.ActionBar;
 
 import de.mide.android.schimpfmeister.engine.SchimpfwortGenerator;
 import de.mide.android.schimpfmeister.engine.SchimpfwortRecord;
-import de.mide.android.schimpfmeister.favoriten.FavoritenActivity;
+import de.mide.android.schimpfmeister.favoritenActivity.FavoritenActivity;
 
 
 /**

@@ -1,4 +1,4 @@
-package de.mide.android.schimpfmeister.favoriten;
+package de.mide.android.schimpfmeister.favoritenActivity;
 
 import static de.mide.android.schimpfmeister.MainActivity.TAG4LOGGING;
 

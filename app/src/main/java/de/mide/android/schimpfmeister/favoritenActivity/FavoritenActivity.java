@@ -1,4 +1,4 @@
-package de.mide.android.schimpfmeister.favoriten;
+package de.mide.android.schimpfmeister.favoritenActivity;
 
 import android.os.Bundle;
 import android.view.View;
