@@ -5,21 +5,19 @@ import static android.content.Intent.ACTION_VIEW;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.ActionBar;
 
-import de.mide.android.schimpfmeister.engine.FavoritenSingleton;
 import de.mide.android.schimpfmeister.engine.SchimpfwortGenerator;
 import de.mide.android.schimpfmeister.engine.SchimpfwortRecord;
+import de.mide.android.schimpfmeister.favoriten.FavoritenActivity;
 
 
 /**
@@ -124,15 +122,17 @@ public class MainActivity extends AppCompatActivity {
      *
      * @param item  Menu-Item, welches gerade ein Event ausgelöst hat.
      *
-     * @return Es wird genau dann {@code true} zurückgegeben, wenn wir
-     *         in dieser Methode das Ereignis verarbeiten konnten.
+     * @return Es wird {@code true} zurückgegeben, wenn wir in dieser
+     *          Methode das Ereignis verarbeiten konnten, ansonsten
+     *          der Wert der Super-Methode.
      */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
         final int selectedMenuId = item.getItemId();
 
-        // switch-case kann nicht verwendet werden, siehe auch https://stackoverflow.com/questions/2100520
+        // switch-case kann nicht verwendet werden, siehe auch
+        // https://stackoverflow.com/questions/2100520
 
         if (selectedMenuId == R.id.action_neuerspruch) {
 
@@ -152,6 +152,13 @@ public class MainActivity extends AppCompatActivity {
         } else if (selectedMenuId == R.id.action_hilfe) {
 
             hilfeAnzeigen();
+            return true;
+
+        } else if (selectedMenuId == R.id.action_favoriten_anzeigen) {
+
+            Intent intent = new Intent(this, FavoritenActivity.class);
+            startActivity(intent);
+
             return true;
 
         } else {

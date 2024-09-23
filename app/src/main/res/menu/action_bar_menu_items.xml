@@ -3,30 +3,38 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <!-- Wegen showAsAction="always" werden für die folgenden Menü-Einträge
-         die Icons in der ActionBar angezeigt. -->
+         die Icons in der ActionBar angezeigt, aber nicht der Text; es werden
+         trotzdem Texte gesetzt, weil diese evtl. von Screenreadern, wie
+         sie von sehbehinderten Menschen verwendet werden, benötigt werden.
+         -->
     <item
         android:id="@+id/action_neuerspruch"
         android:icon="@drawable/baseline_refresh_24"
-        android:title="Neuer Spruch"
+        android:title="@string/actionbar_neu"
         app:showAsAction="always|withText" />
 
     <item
         android:id="@+id/action_merken"
         android:icon="@drawable/baseline_favorite_24"
-        android:title="Spruch merken"
+        android:title="@string/actionbar_merken"
         app:showAsAction="always" />
 
 
     <!-- Wegen showAsAction="never" werden für die folgenden Menü-Einträge
          als Einträge im Overflow-Menü angezeigt. -->
     <item
+        android:id="@+id/action_favoriten_anzeigen"
+        android:title="@string/actionbar_favoriten_anzeigen"
+        app:showAsAction="never" />
+
+    <item
         android:id="@+id/action_ueber"
-        android:title="Über diese App"
+        android:title="@string/actionbar_ueber_dieses_app"
         app:showAsAction="never" />
 
     <item
         android:id="@+id/action_hilfe"
-        android:title="Hilfe"
+        android:title="@string/actionbar_hilfe"
         app:showAsAction="never" />
 
 </menu>

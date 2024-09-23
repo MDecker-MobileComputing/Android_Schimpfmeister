@@ -1,4 +1,4 @@
-package de.mide.android.schimpfmeister.engine;
+package de.mide.android.schimpfmeister;
 
 import android.util.Log;
 
@@ -6,6 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static de.mide.android.schimpfmeister.MainActivity.TAG4LOGGING;
+
+import de.mide.android.schimpfmeister.engine.SchimpfwortRecord;
 
 
 /**
