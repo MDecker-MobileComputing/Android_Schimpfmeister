@@ -21,7 +21,10 @@ import de.mide.android.schimpfmeister.engine.SchimpfwortRecord;
 
 
 /**
- * Demo für die mit Android 3.0 (API-Level 11) eingeführte <i>ActionBar</i>.
+ * Activity zur Anzeige zufällig generierter Schimpfwörter.
+ * <br><br>
+ *
+ * Die App verwendet die in Android 3.0 (API-Level 11) eingeführte <i>ActionBar</i>.
  * In der Datei {@code }values/themes.xml} muss als parent auch ein Theme gesetzt sein,
  * dass die ActionBar unterstützt, z.B. {@code Theme.AppCompat.Light.DarkActionBar}.
  * <br><br>
@@ -52,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        _adjektivTextview = findViewById(R.id.adjektiv_textview);
+        _adjektivTextview   = findViewById(R.id.adjektiv_textview);
         _substantivTextview = findViewById(R.id.subjektiv_textview);
 
         actionBarKonfigurieren();
@@ -102,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     /**
-     * Event-Handler für Menu-Items in ActionBar.
+     * Event-Handler für Menu-Items in der ActionBar.
      *
      * @param item  Menu-Item, welches gerade ein Event ausgelöst hat.
      *
