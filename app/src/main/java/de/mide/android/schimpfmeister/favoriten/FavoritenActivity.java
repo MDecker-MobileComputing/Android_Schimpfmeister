@@ -31,12 +31,14 @@ public class FavoritenActivity extends AppCompatActivity implements View.OnClick
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_favoriten);
 
+        // Titel der Activity setzen
         int anzahl   = _favoritenSingleton.getAnzahl();
         String titel = getString(R.string.activit_titel_favoriten, anzahl);
         setTitle( titel );
 
         Button button = findViewById(R.id.zurueckButton);
         button.setOnClickListener(this);
+
 
         // RecyclerView initialisieren
         RecyclerView recyclerView = findViewById(R.id.favoritenRecyclerView);
@@ -49,7 +51,7 @@ public class FavoritenActivity extends AppCompatActivity implements View.OnClick
 
 
     /**
-     * Event-Handler für "Zurück"-Button.
+     * Event-Handler für "Zurück"-Button, für Rückkehr zur Haupt-Activity.
      *
      * @param view Button, der das Event ausgelöst hat
      */
