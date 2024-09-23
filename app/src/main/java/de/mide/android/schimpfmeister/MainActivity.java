@@ -1,5 +1,6 @@
 package de.mide.android.schimpfmeister;
 
+import static de.mide.android.schimpfmeister.BuildConfig.BUILD_ZEITPUNKT;
 import static android.content.Intent.ACTION_VIEW;
 
 import android.content.Intent;
@@ -210,7 +211,7 @@ public class MainActivity extends AppCompatActivity {
     private void aboutDialogAnzeigen() {
 
         int anzahlKombinationen = _schimpfwortGenerator.getAnzahlKombinationen();
-        String ueberText = getString(R.string.ueber_text, anzahlKombinationen);
+        String ueberText = getString(R.string.ueber_text, anzahlKombinationen, BUILD_ZEITPUNKT);
 
         AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(this);
 
