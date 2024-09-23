@@ -18,6 +18,9 @@
     <string name="actionbar_neu">Neues Schimpfwort</string>
     <string name="actionbar_merken">Schimpfwort merken</string>
 
+    <string name="button_ok">OK</string>
+    <string name="button_schimpfolino_besuchen">Schimpfolino besuchen</string>
+
     <!-- Texte für FavoritenActivity -->
     <string name="button_zurueck">Zurück</string>
     <string name="activit_titel_favoriten">Gemerkte Schimpfwörter (%d)</string>

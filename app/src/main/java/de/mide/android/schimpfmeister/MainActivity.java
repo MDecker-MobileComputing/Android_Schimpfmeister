@@ -37,6 +37,14 @@ public class MainActivity extends AppCompatActivity {
     /** Dieser Tag soll von allen Klassen im Projekt verwendet werden. */
     public static final String TAG4LOGGING = "Schimpfmeister";
 
+    /** URL zur Hilfeseite für die App, die in externer Browser-App geöffnet wird. */
+    private static final String URL_SCHIMPFMEISTER =
+            "https://github.com/MDecker-MobileComputing/Android_Schimpfmeister?tab=readme-ov-file#schimpfmeister";
+
+    /** URL zur Homepage von "Schimpfolino" auf GitHub, die in externer Browser-App geöffnet wird. */
+    private static final String URL_SCHIMPFOLOINO =
+            "https://github.com/NikolaiRadke/Schimpfolino/blob/main/README.md";
+
     /** Objekt für zufällige Erzeugung von Schimpfwörtern. */
     private SchimpfwortGenerator _schimpfwortGenerator = new SchimpfwortGenerator(this);
 
@@ -217,7 +225,13 @@ public class MainActivity extends AppCompatActivity {
 
         dialogBuilder.setTitle(R.string.ueber_titel);
         dialogBuilder.setMessage(ueberText);
-        dialogBuilder.setPositiveButton("Ok", null);
+
+        dialogBuilder.setPositiveButton(R.string.button_ok, null);
+
+        dialogBuilder.setNeutralButton(R.string.button_schimpfolino_besuchen, (dialog, which) -> {
+
+            urlInBrowserOeffnen( URL_SCHIMPFOLOINO );
+        });
 
         AlertDialog dialog = dialogBuilder.create();
         dialog.show();
@@ -230,10 +244,20 @@ public class MainActivity extends AppCompatActivity {
      */
     private void hilfeAnzeigen() {
 
-        Uri httpUri = Uri.parse("https://bit.ly/schimpfmeister"); // Kurz-URL für GitHub-Seite
+        urlInBrowserOeffnen( URL_SCHIMPFMEISTER );
+    }
+
+
+    /**
+     * URL in externer Web-Browser-App auf Gerät öffnen.
+     *
+     * @param url URL, die im Browser geöffnet werden soll.
+     */
+    private void urlInBrowserOeffnen(String url) {
+
+        Uri httpUri = Uri.parse(url);
         Intent intent = new Intent(ACTION_VIEW);
         intent.setData(httpUri);
-
         startActivity(intent);
     }
 
