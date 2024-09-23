@@ -174,6 +174,7 @@ public class MainActivity extends AppCompatActivity {
         if (_merkenMenuItem != null) {
 
             _merkenMenuItem.setEnabled(true);
+            _merkenMenuItem.setIcon(R.drawable.baseline_favorite_24);
         }
     }
 
@@ -189,6 +190,7 @@ public class MainActivity extends AppCompatActivity {
         int anzahl = favoritenSingleton.hinzufuegen(_schimpfwort);
 
         _merkenMenuItem.setEnabled(false);
+        _merkenMenuItem.setIcon(R.drawable.baseline_favorite_24_deaktiviert);
 
         String favoritHinzugefuegtText = getString(R.string.favorit_hinzugefuegt, anzahl);
         Toast.makeText(this, favoritHinzugefuegtText, Toast.LENGTH_LONG).show();
