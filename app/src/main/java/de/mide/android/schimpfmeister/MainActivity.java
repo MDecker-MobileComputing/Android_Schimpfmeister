@@ -5,6 +5,7 @@ import static android.content.Intent.ACTION_VIEW;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -16,6 +17,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.ActionBar;
 
+import de.mide.android.schimpfmeister.engine.FavoritenSingleton;
 import de.mide.android.schimpfmeister.engine.SchimpfwortGenerator;
 import de.mide.android.schimpfmeister.engine.SchimpfwortRecord;
 
@@ -33,6 +35,7 @@ import de.mide.android.schimpfmeister.engine.SchimpfwortRecord;
  */
 public class MainActivity extends AppCompatActivity {
 
+    /** Dieser Tag soll von allen Klassen im Projekt verwendet werden. */
     public static final String TAG4LOGGING = "Schimpfmeister";
 
     /** Objekt für zufällige Erzeugung von Schimpfwörtern. */
@@ -43,8 +46,18 @@ public class MainActivity extends AppCompatActivity {
 
     /** UI-Element zur Anzeige des Substantivs am Ende des Schimpfworts. */
     private TextView _substantivTextview = null;
-    
-    
+
+    /** Aktuell angezeigtes Schimpfwort. */
+    private SchimpfwortRecord _schimpfwort = null;
+
+    /**
+     * Referenz auf Icon in ActionBar zum Merken eines Schimpfworts als Favorit; dieses
+     * Icon soll nach dem Merken eines Schimpfworts deaktiviert werden bis
+     * ein neues Schimpfwort angezeigt wird.
+     */
+    private MenuItem _merkenMenuItem = null;
+
+
     /**
      * Lifecycle-Methode: Layout-Datei für Activity setzen und ActionBar konfigurieren.
      * Es wird auch gleich ein Schimpfwort erzeugt und angezeigt.
@@ -100,6 +113,8 @@ public class MainActivity extends AppCompatActivity {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.action_bar_menu_items, menu);
 
+        _merkenMenuItem = menu.findItem(R.id.action_merken);
+
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -124,6 +139,11 @@ public class MainActivity extends AppCompatActivity {
             neuesSchimpfwort();
             return true;
 
+        } else if (selectedMenuId == R.id.action_merken) {
+
+            lesezeichenSetzen();
+            return true;
+
         } else if (selectedMenuId == R.id.action_ueber) {
 
             aboutDialogAnzeigen();
@@ -146,10 +166,32 @@ public class MainActivity extends AppCompatActivity {
      */
     private void neuesSchimpfwort() {
 
-        SchimpfwortRecord schimpfwort = _schimpfwortGenerator.getSchimpfwort();
+        _schimpfwort = _schimpfwortGenerator.getSchimpfwort();
 
-        _adjektivTextview.setText(   schimpfwort.adjektiv()   );
-        _substantivTextview.setText( schimpfwort.substantiv() );
+        _adjektivTextview.setText(   _schimpfwort.adjektiv()   );
+        _substantivTextview.setText( _schimpfwort.substantiv() );
+
+        if (_merkenMenuItem != null) {
+
+            _merkenMenuItem.setEnabled(true);
+        }
+    }
+
+
+    /**
+     * Event-Handler für ActionBar-Icon zum Speichern eines Schimpfworts als Favorit.
+     * Das Icon in der ActionBar wird nach dem Speichern deaktiviert, damit ein Schimpfwort
+     * nicht mehrfach als Favorit gespeichert werden kann.
+     */
+    private void lesezeichenSetzen() {
+
+        FavoritenSingleton favoritenSingleton = FavoritenSingleton.getInstance();
+        int anzahl = favoritenSingleton.hinzufuegen(_schimpfwort);
+
+        _merkenMenuItem.setEnabled(false);
+
+        String favoritHinzugefuegtText = getString(R.string.favorit_hinzugefuegt, anzahl);
+        Toast.makeText(this, favoritHinzugefuegtText, Toast.LENGTH_LONG).show();
     }
 
 

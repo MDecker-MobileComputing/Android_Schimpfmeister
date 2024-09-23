@@ -8,8 +8,13 @@
         android:id="@+id/action_neuerspruch"
         android:icon="@drawable/baseline_refresh_24"
         android:title="Neuer Spruch"
-        app:showAsAction="always" />
+        app:showAsAction="always|withText" />
 
+    <item
+        android:id="@+id/action_merken"
+        android:icon="@drawable/baseline_favorite_24"
+        android:title="Spruch merken"
+        app:showAsAction="always" />
 
 
     <!-- Wegen showAsAction="never" werden für die folgenden Menü-Einträge

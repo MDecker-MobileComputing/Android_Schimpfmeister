@@ -92,7 +92,7 @@ public class SchimpfwortGenerator {
             case 1: return FEMININUM;
             case 2: return NEUTRUM;
             default:
-                Log.w(TAG4LOGGING, "Unerwarteter Wert für Zufallszahl für Genus: " + zufallszahl);
+                Log.w(TAG4LOGGING, "Unerwartete Zufallszahl für Genus: " + zufallszahl);
                 return NEUTRUM;
         }
     }
@@ -162,7 +162,7 @@ public class SchimpfwortGenerator {
      */
     private String getZufallsString( int stringArrayResId ) {
 
-        Resources resources  =  _context.getResources();
+        Resources resources  = _context.getResources();
         String[] stringArray = resources.getStringArray(stringArrayResId);
         int zufallsIndex     = _random.nextInt(stringArray.length);
 

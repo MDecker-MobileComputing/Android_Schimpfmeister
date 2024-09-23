@@ -10,4 +10,6 @@
         Schimpfwörter erzeugen.
     </string>
 
+    <string name="favorit_hinzugefuegt">Favorit hinzugefügt, es gibt jetzt %d Favoriten.</string>
+
 </resources>
