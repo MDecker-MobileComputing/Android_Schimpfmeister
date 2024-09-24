@@ -12,6 +12,8 @@
         android:icon="@drawable/baseline_refresh_24"
         android:title="@string/actionbar_neu"
         app:showAsAction="always|withText" />
+    <!-- wegen "withText" wird der Text zusätzlich zum Icon angezeigt, 
+         wenn genügend Platz vorhanden ist. -->
 
     <item
         android:id="@+id/action_merken"
