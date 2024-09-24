@@ -26,7 +26,7 @@ import de.mide.android.schimpfmeister.favoritenActivity.FavoritenActivity;
  * <br><br>
  *
  * Die App verwendet die in Android 3.0 (API-Level 11) eingeführte <i>ActionBar</i>.
- * In der Datei {@code }values/themes.xml} muss als parent auch ein Theme gesetzt sein,
+ * In der Datei {@code values/themes.xml} muss als parent auch ein Theme gesetzt sein,
  * dass die ActionBar unterstützt, z.B. {@code Theme.AppCompat.Light.DarkActionBar}.
  * <br><br>
  *

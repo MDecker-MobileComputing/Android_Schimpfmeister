@@ -57,7 +57,7 @@ public class FavoritenAdapter extends RecyclerView.Adapter {
 
 
     /**
-     * Einzelnen Eintrag im {@code }RecyclerView} mit Daten versorgen.
+     * Einzelnen Eintrag im {@code RecyclerView} mit Daten versorgen.
      *
      * @param holder   ViewHolder-Objekt, das einen Eintrag repräsentiert und
      *                 mit Daten versorgt werden soll.

@@ -22,7 +22,7 @@ public class FavoritenActivity extends AppCompatActivity implements View.OnClick
 
 
     /**
-     * Lifecycle-Methode: Layout-Datei für Activity laden, {@code }RecyclerView} initialisieren
+     * Lifecycle-Methode: Layout-Datei für Activity laden, {@code RecyclerView} initialisieren
      * und Event-Handler für "Zurück"-Button setzen.
      */
     @Override
