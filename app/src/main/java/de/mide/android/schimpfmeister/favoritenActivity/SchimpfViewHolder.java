@@ -21,6 +21,8 @@ public class SchimpfViewHolder extends RecyclerView.ViewHolder {
 
     /**
      * Konstruktor
+     *
+     * @param itemView View-Element, das den Eintrag in der Liste repräsentiert.
      */
     public SchimpfViewHolder(@NonNull View itemView) {
 

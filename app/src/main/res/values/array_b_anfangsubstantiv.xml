@@ -88,7 +88,7 @@
         <item>Teich</item>
         <item>Knatter</item>
         <item>Sauf</item>
-        <item>Pipi</item>
+        <!--<item>Pipi</item>-->
         <item>Struller</item>
         <item>Gröten</item>
         <item>Nasen</item>
@@ -166,6 +166,9 @@
         <item>Rambazamba</item>
         <item>Klein</item>
         <item>Sprudel</item>
+
+        <!-- ab jetzt eigene -->
+        <item>Dumpf</item>
 
     </string-array>
 </resources>

@@ -71,6 +71,11 @@ public class FavoritenAdapter extends RecyclerView.Adapter {
             SchimpfwortRecord schimpfwortRecord = _favoritenSingleton.getSchimpfwort(position);
             schimpfHolder.setSchimpfwort(schimpfwortRecord);
 
+            holder.itemView.setOnClickListener( view -> {
+
+                Log.i(TAG4LOGGING, "Schimpfwort in Favoriten-Liste geklickt: " + schimpfwortRecord);
+            });
+
         } else {
 
             Log.w(TAG4LOGGING, "Ungültiger ViewHolder-Typ: " + holder.getClass().getName());
