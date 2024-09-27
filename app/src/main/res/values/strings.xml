@@ -6,6 +6,8 @@
     <string name="ueber_titel">Über Schimpfmeister</string>
     <string name="ueber_text">Diese App verwendet für die Erzeugung der Beschimpfungen den
         Algorithmus und die Wortlisten von Schimpfolino.
+        \n\nAchtung: Die als Favoriten markierten Schimpfwörter werden nicht über einen Neustart
+        der App hinaus persistiert.
         \n\nDie App kann %1$,d verschiedene Schimpfwörter erzeugen.
         \n\nApp erzeugt am:\n%2$s.
     </string>
