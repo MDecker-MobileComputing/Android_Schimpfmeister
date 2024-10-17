@@ -61,6 +61,7 @@ public class FavoritenAdapter extends RecyclerView.Adapter {
      *
      * @param holder   ViewHolder-Objekt, das einen Eintrag repräsentiert und
      *                 mit Daten versorgt werden soll.
+     *
      * @param position Position des Eintrags in der RecyclerView (0-basiert)
      */
     @Override
