@@ -67,7 +67,7 @@ public class FavoritenAdapter extends RecyclerView.Adapter {
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
 
-        if ( holder instanceof SchimpfViewHolder schimpfHolder) {
+        if ( holder instanceof SchimpfViewHolder schimpfHolder ) {
 
             SchimpfwortRecord schimpfwortRecord = _favoritenSingleton.getSchimpfwort(position);
             schimpfHolder.setSchimpfwort(schimpfwortRecord);
