@@ -16,6 +16,12 @@ Die App erzeugt zufällige Schimpfwörter unter Verwendung der Wortlisten und de
 
 <br>
 
+**Referenzen:**
+* [Artikel über Schimpfoliono auf heise.de vom Dezember 2024](https://heise.de/-10184669)
+* [Artikel mit Erwähnung von Schimpfmeister auf heise.de vom Februar 2025](https://heise.de/-10289014)
+
+<br>
+
 ----
 
 ## Screenshots ##
