@@ -22,6 +22,11 @@ Die App erzeugt zufällige Schimpfwörter unter Verwendung der Wortlisten und de
 
 <br>
 
+[Repo](https://github.com/MDecker-MobileComputing/Android_Schimpfmeister_AppStore) mit Variante dieser App für Veröffentlichung 
+in App-Store.
+
+<br>
+
 ----
 
 ## Screenshots ##
