@@ -7,7 +7,7 @@ def buildZeitpunkt = new Date()
 
 android {
     namespace 'de.mide.android.schimpfmeister'
-    compileSdk 34
+    compileSdk 36
 
     // für BUILD_ZEITPUNKT unten
     android.buildFeatures.buildConfig true
@@ -15,7 +15,7 @@ android {
     defaultConfig {
         applicationId "de.mide.android.schimpfmeister"
         minSdk 24
-        targetSdk 34
+        targetSdk 36
         versionCode 1
         versionName "1.0"
 
@@ -33,8 +33,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_17
-        targetCompatibility JavaVersion.VERSION_17
+        sourceCompatibility JavaVersion.VERSION_21
+        targetCompatibility JavaVersion.VERSION_21
     }
 }
 
@@ -48,16 +48,6 @@ dependencies {
     androidTestImplementation libs.ext.junit
     androidTestImplementation libs.espresso.core
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
