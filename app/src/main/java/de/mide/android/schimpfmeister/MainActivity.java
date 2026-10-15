@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
-        actionBar.setTitle   ( R.string.app_name );
+        actionBar.setTitle   ( R.string.app_name       );
         actionBar.setSubtitle( R.string.app_untertitel );
 
         actionBar.setDisplayShowHomeEnabled(true);
